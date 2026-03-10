@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head><base href="/truecost-demo/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tekoälykuvan generointi — Avoin kestävyysindeksi</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">True<span>cost</span></a>
+      <nav>
+        <a href="/" >Etusivu</a>
+        <a href="/methodology" >Metodologia</a>
+        <a href="/compare" >Vertailu</a>
+        <a href="/polluters" >Saastuttajat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 8px;">
+  <a href="/compare" style="font-family: var(--font-heading); font-size: 14px; color: var(--text-secondary); text-decoration: none;">
+    ← Takaisin vertailuun
+  </a>
+</div>
+
+<div class="hero" style="border-bottom: none; padding-bottom: 0;">
+  <div class="card-category" style="margin-bottom: 12px; display: inline-block;">Digitaalinen</div>
+  <h1>Tekoälykuvan generointi</h1>
+  <p style="font-size: 16px; color: var(--text-secondary); margin-top: 8px;">Generating an AI image</p>
+</div>
+
+<!-- Score + confidence -->
+<section style="margin-bottom: 48px;">
+  <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 4px;">
+    <div class="score-number low">
+      0.0
+    </div>
+    <div>
+      <div class="score-label">Truecost-arvo</div>
+      <div style="margin-top: 4px;">
+        Datan luotettavuus: 
+
+<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KORKEA</span>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="score-bar" style="margin-bottom: 16px;">
+    
+    
+    <div class="score-bar-fill low"
+         style="width: 0.0%"></div>
+  </div>
+  
+  <p style="font-size: 14px; color: var(--text-secondary); font-family: var(--font-heading);">
+    Carbon well-measured by multiple peer-reviewed studies. Water has moderate uncertainty.
+  </p>
+  
+
+  <p style="font-size: 18px; margin-top: 16px; margin-bottom: 24px;">Yhden tekoälykuvan generointi (esim. DALL-E, Midjourney, Stable Diffusion) kuluttaa noin 0,002–0,007 kWh sähköä, mikä tuottaa noin 2–7 grammaa CO₂:ta. Tämä vastaa yhtä Google-hakua tai muutaman sähköpostin lähettämistä.
+</p>
+
+  
+  <div class="card-surprising" style="margin-bottom: 32px;">
+    <strong>Tiesitkö?</strong> Media esittää usein tekoälykuvien generoinnin ympäristölle haitallisena, mutta 1000 tekoälykuvan generointi tuottaa vähemmän CO₂:ta kuin yksi 20 km automatka kuvauksiin.
+
+  </div>
+  
+</section>
+
+<!-- Transparent calculation breakdown -->
+<section style="margin-bottom: 48px;">
+  <div class="section-header">Läpinäkyvä laskenta</div>
+  <h2>Miten tähän lukuun päädyttiin?</h2>
+  <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 16px;">
+    Truecost-arvo lasketaan absoluuttisista fysikaalisista arvoista. Jokainen rivi alla
+    näyttää mitattavan arvon, miten se normalisoitiin, ja mistä lähteestä se tulee.
+  </p>
+
+  <!-- Calculation table -->
+  <div style="background: var(--card-bg); border: 1px solid var(--border); overflow-x: auto;">
+    <table style="width: 100%; border-collapse: collapse; font-family: var(--font-heading); font-size: 14px;">
+      <thead>
+        <tr style="border-bottom: 2px solid var(--text); text-align: left;">
+          <th style="padding: 12px 16px;">Ulottuvuus</th>
+          <th style="padding: 12px 8px; text-align: right;">Absoluuttinen arvo</th>
+          <th style="padding: 12px 8px; text-align: right;">Pistearvo 100 =</th>
+          <th style="padding: 12px 8px; text-align: right;">Normalisoitu</th>
+          <th style="padding: 12px 8px; text-align: right;">Paino</th>
+          <th style="padding: 12px 8px; text-align: right;">Painotettu</th>
+          <th style="padding: 12px 16px; text-align: center;">Luotettavuus</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        
+        
+        
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 12px 16px; font-weight: 600;">Hiilipäästöt</td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            0.005 kg CO₂e
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            9.5 kg CO₂e
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-weight: 700; color: var(--positive);">
+            0.05
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            ×0.35
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            0.02
+          </td>
+          <td style="padding: 12px 16px; text-align: center;">
+            
+            
+
+<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KORKEA</span>
+
+
+            
+          </td>
+        </tr>
+        
+        
+        
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 12px 16px; font-weight: 600;">Vedenkulutus</td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            1.0 liters
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            3840 liters
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-weight: 700; color: var(--positive);">
+            0.03
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            ×0.2
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            0.01
+          </td>
+          <td style="padding: 12px 16px; text-align: center;">
+            
+            
+
+<span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KESKITASO</span>
+
+
+            
+          </td>
+        </tr>
+        
+        
+        
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 12px 16px; font-weight: 600;">Maankäyttö</td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            0.0 m²·year
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            51 m²·year
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-weight: 700; color: var(--positive);">
+            0.0
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            ×0.2
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            0.00
+          </td>
+          <td style="padding: 12px 16px; text-align: center;">
+            
+            
+
+<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KORKEA</span>
+
+
+            
+          </td>
+        </tr>
+        
+        
+        
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 12px 16px; font-weight: 600;">Jäte</td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            0.0 kg
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            5 kg
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-weight: 700; color: var(--positive);">
+            0.0
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            ×0.15
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            0.00
+          </td>
+          <td style="padding: 12px 16px; text-align: center;">
+            
+            
+
+<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KORKEA</span>
+
+
+            
+          </td>
+        </tr>
+        
+        
+        
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 12px 16px; font-weight: 600;">Myrkyllisyys</td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            0.0 µDALY
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            162 µDALY
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-weight: 700; color: var(--positive);">
+            0.0
+          </td>
+          <td style="padding: 12px 8px; text-align: right; color: var(--text-secondary);">
+            ×0.1
+          </td>
+          <td style="padding: 12px 8px; text-align: right; font-family: var(--font-mono);">
+            0.00
+          </td>
+          <td style="padding: 12px 16px; text-align: center;">
+            
+            
+
+<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KORKEA</span>
+
+
+            
+          </td>
+        </tr>
+        
+        <tr style="border-top: 2px solid var(--text); font-weight: 700;">
+          <td style="padding: 12px 16px;" colspan="5">Truecost-arvo (painotettu summa)</td>
+          <td style="padding: 12px 8px; text-align: right; font-size: 18px;" class="score-number low">
+            0.0
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Floor rule note -->
+  
+
+  <!-- % of annual budget interpretation -->
+  <div style="margin-top: 24px; padding: 16px; background: var(--bg); border: 1px solid var(--border);">
+    <h4 style="font-family: var(--font-heading); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
+      Osuus vuotuisesta planeettabudjetistasi
+    </h4>
+    
+    
+    <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px; font-family: var(--font-heading);">
+      <span>Hiilipäästöt</span>
+      <span style="font-family: var(--font-mono); font-weight: 600;">
+        &lt;0.01%
+      </span>
+    </div>
+    
+    
+    
+    <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px; font-family: var(--font-heading);">
+      <span>Vedenkulutus</span>
+      <span style="font-family: var(--font-mono); font-weight: 600;">
+        &lt;0.01%
+      </span>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</section>
+
+<!-- Per-dimension source details -->
+<section style="margin-bottom: 48px;">
+  <div class="section-header">Lähdedata ulottuvuuksittain</div>
+  <h2>Mistä absoluuttiset arvot tulevat?</h2>
+
+  
+  
+  
+  <div class="card" style="margin-bottom: 12px;">
+    <div class="card-header">
+      <div class="card-title" style="font-size: 16px;">Hiilipäästöt</div>
+      
+      
+
+<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KORKEA</span>
+
+
+      
+    </div>
+    <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 13px; background: var(--bg); padding: 12px; border-radius: 3px;">
+      300W GPU × 10s = 0.00083 kWh × 3 (PUE overhead) ≈ 0.0025 kWh. Safety margin 2x → 0.005 kWh × ~1 kg CO₂/kWh = 0.005 kg CO₂e
+    </div>
+    
+    <ul class="source-list" style="margin-top: 8px;">
+      
+      <li>Luccioni et al. (2023): Power Hungry Processing — energy and carbon costs of generative AI inference</li>
+      
+      <li>IEA (2024): Electricity consumption of data centres, AI and crypto</li>
+      
+    </ul>
+    
+    
+    <p style="margin-top: 8px; font-size: 13px; color: var(--text-secondary); font-style: italic;">
+      Well-measured. Range 0.002–0.010 kg CO₂e depending on model size and hardware.
+    </p>
+    
+  </div>
+  
+  
+  
+  <div class="card" style="margin-bottom: 12px;">
+    <div class="card-header">
+      <div class="card-title" style="font-size: 16px;">Vedenkulutus</div>
+      
+      
+
+<span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KESKITASO</span>
+
+
+      
+    </div>
+    <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 13px; background: var(--bg); padding: 12px; border-radius: 3px;">
+      Data center WUE ~1.8 L/kWh × 0.005 kWh ≈ 0.009 L direct. Rounded up to 1L to include cooling lifecycle.
+    </div>
+    
+    <ul class="source-list" style="margin-top: 8px;">
+      
+      <li>Li et al. (2023): Making AI Less Thirsty</li>
+      
+    </ul>
+    
+    
+    <p style="margin-top: 8px; font-size: 13px; color: var(--text-secondary); font-style: italic;">
+      Varies significantly by data center location. Arid regions much higher.
+    </p>
+    
+  </div>
+  
+  
+  
+  <div class="card" style="margin-bottom: 12px;">
+    <div class="card-header">
+      <div class="card-title" style="font-size: 16px;">Maankäyttö</div>
+      
+      
+
+<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KORKEA</span>
+
+
+      
+    </div>
+    <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 13px; background: var(--bg); padding: 12px; border-radius: 3px;">
+      Data center land per inference: &lt;0.001 m²·year
+    </div>
+    
+    
+  </div>
+  
+  
+  
+  <div class="card" style="margin-bottom: 12px;">
+    <div class="card-header">
+      <div class="card-title" style="font-size: 16px;">Jäte</div>
+      
+      
+
+<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KORKEA</span>
+
+
+      
+    </div>
+    <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 13px; background: var(--bg); padding: 12px; border-radius: 3px;">
+      No physical waste from a single inference
+    </div>
+    
+    
+  </div>
+  
+  
+  
+  <div class="card" style="margin-bottom: 12px;">
+    <div class="card-header">
+      <div class="card-title" style="font-size: 16px;">Myrkyllisyys</div>
+      
+      
+
+<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-family: var(--font-heading); font-weight: 600;">KORKEA</span>
+
+
+      
+    </div>
+    <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 13px; background: var(--bg); padding: 12px; border-radius: 3px;">
+      No measurable toxicity from a single inference
+    </div>
+    
+    
+  </div>
+  
+  
+  
+</section>
+
+
+<section style="margin-bottom: 48px;">
+  <h2>Vertailut</h2>
+  <ul style="padding-left: 0; list-style: none;">
+    
+    <li style="padding: 8px 0; font-size: 17px; border-bottom: 1px solid var(--border);">
+      ~600x vähemmän CO₂:ta kuin 20km automatka kuvauksiin
+    </li>
+    
+    <li style="padding: 8px 0; font-size: 17px; border-bottom: 1px solid var(--border);">
+      Vastaa puhelimen lataamista kerran
+    </li>
+    
+  </ul>
+</section>
+
+
+<section style="margin-bottom: 48px;">
+  <h2>Metodologia</h2>
+  <p>Based on GPU power consumption (300W for ~10 seconds inference) and average grid carbon intensity. Water impact from data center cooling estimated via WUE metrics.
+</p>
+</section>
+
+<section style="margin-bottom: 48px;">
+  <h2>Lähteet</h2>
+  <ul class="source-list">
+    
+    <li>Luccioni et al. (2023): Power Hungry Processing</li>
+    
+    <li>IEA (2024): Electricity consumption of data centres, AI and crypto</li>
+    
+    <li>Li et al. (2023): Making AI Less Thirsty</li>
+    
+  </ul>
+</section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>Truecost — Avoin kestävyysindeksi</div>
+      <div>Data & metodologia ovat avointa lähdekoodia</div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head><base href="/truecost-demo/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metodologia — Avoin kestävyysindeksi</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">True<span>cost</span></a>
+      <nav>
+        <a href="/" >Etusivu</a>
+        <a href="/methodology" class="active">Metodologia</a>
+        <a href="/compare" >Vertailu</a>
+        <a href="/polluters" >Saastuttajat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div class="hero">
+  <div class="section-header">Metodologia</div>
+  <h1>Miten Truecost-arvo lasketaan?</h1>
+  <p class="subtitle">
+    Läpinäkyvä, avoin ja haastettavissa oleva laskentamalli.
+    Jokainen luku voidaan jäljittää alkuperäislähteeseen.
+  </p>
+</div>
+
+<!-- Infograafi: laskentaprosessi -->
+<section style="margin-bottom: 56px;">
+  <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 800px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+    <!-- Taustavärit -->
+    <defs>
+      <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#10b981"/>
+        <stop offset="50%" stop-color="#f59e0b"/>
+        <stop offset="100%" stop-color="#ef4444"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Vaihe 1: Absoluuttiset arvot -->
+    <rect x="20" y="10" width="760" height="90" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="40" y="38" font-size="13" font-weight="700" fill="#2563eb" letter-spacing="1.5">VAIHE 1</text>
+    <text x="130" y="38" font-size="15" font-weight="700" fill="#1a1a1a">Absoluuttiset arvot fysikaalisissa yksiköissä</text>
+    <text x="40" y="62" font-size="13" fill="#555">Esim. naudanlihapihvi (200g):</text>
+    <text x="40" y="82" font-size="12" fill="#555" font-family="'SF Mono', monospace">12 kg CO₂e</text>
+    <text x="180" y="82" font-size="12" fill="#555" font-family="'SF Mono', monospace">3 080 litraa</text>
+    <text x="340" y="82" font-size="12" fill="#555" font-family="'SF Mono', monospace">54 m²·vuosi</text>
+    <text x="490" y="82" font-size="12" fill="#555" font-family="'SF Mono', monospace">0,05 kg jätettä</text>
+    <text x="650" y="82" font-size="12" fill="#555" font-family="'SF Mono', monospace">2 µDALY</text>
+
+    <!-- Nuoli alas -->
+    <polygon points="400,108 390,120 410,120" fill="#2563eb"/>
+    <line x1="400" y1="100" x2="400" y2="120" stroke="#2563eb" stroke-width="2"/>
+
+    <!-- Vaihe 2: Normalisointi -->
+    <rect x="20" y="128" width="760" height="110" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="40" y="156" font-size="13" font-weight="700" fill="#2563eb" letter-spacing="1.5">VAIHE 2</text>
+    <text x="130" y="156" font-size="15" font-weight="700" fill="#1a1a1a">Normalisointi planeettarajoilla</text>
+    <text x="40" y="178" font-size="12" fill="#555">Pistearvo 100 = 1 % vuotuisesta per capita -planeettabudjetista</text>
+
+    <!-- Esimerkit -->
+    <text x="40" y="202" font-size="11" font-family="'SF Mono', monospace" fill="#555">12 kg ÷ 9,5 kg = </text>
+    <text x="195" y="202" font-size="12" font-weight="700" fill="#ef4444">100</text>
+    <text x="250" y="202" font-size="11" font-family="'SF Mono', monospace" fill="#555">3 080 L ÷ 3 840 L = </text>
+    <text x="435" y="202" font-size="12" font-weight="700" fill="#d97706">80,2</text>
+    <text x="490" y="202" font-size="11" font-family="'SF Mono', monospace" fill="#555">54 m² ÷ 51 m² = </text>
+    <text x="645" y="202" font-size="12" font-weight="700" fill="#ef4444">100</text>
+
+    <text x="40" y="226" font-size="11" fill="#999">Lähde: Fanning et al. (2024), Nature — per capita -planeettarajat</text>
+
+    <!-- Nuoli alas -->
+    <polygon points="400,246 390,258 410,258" fill="#2563eb"/>
+    <line x1="400" y1="238" x2="400" y2="258" stroke="#2563eb" stroke-width="2"/>
+
+    <!-- Vaihe 3: Painotus -->
+    <rect x="20" y="266" width="760" height="100" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="40" y="294" font-size="13" font-weight="700" fill="#2563eb" letter-spacing="1.5">VAIHE 3</text>
+    <text x="130" y="294" font-size="15" font-weight="700" fill="#1a1a1a">Painotettu kokonaisarvo</text>
+
+    <!-- Painot visuaalisesti -->
+    <rect x="40" y="310" width="210" height="20" rx="3" fill="#2563eb" opacity="0.15"/>
+    <rect x="40" y="310" width="210" height="20" rx="3" fill="#2563eb" opacity="0.35"/>
+    <text x="48" y="325" font-size="11" font-weight="600" fill="#1a1a1a">Hiilipäästöt 35 %</text>
+
+    <rect x="260" y="310" width="120" height="20" rx="3" fill="#2563eb" opacity="0.25"/>
+    <text x="268" y="325" font-size="11" font-weight="600" fill="#1a1a1a">Vesi 20 %</text>
+
+    <rect x="390" y="310" width="120" height="20" rx="3" fill="#2563eb" opacity="0.25"/>
+    <text x="398" y="325" font-size="11" font-weight="600" fill="#1a1a1a">Maankäyttö 20 %</text>
+
+    <rect x="520" y="310" width="90" height="20" rx="3" fill="#2563eb" opacity="0.20"/>
+    <text x="528" y="325" font-size="11" font-weight="600" fill="#1a1a1a">Jäte 15 %</text>
+
+    <rect x="620" y="310" width="60" height="20" rx="3" fill="#2563eb" opacity="0.15"/>
+    <text x="626" y="325" font-size="11" font-weight="600" fill="#1a1a1a">Myrk. 10 %</text>
+
+    <text x="40" y="355" font-size="12" font-family="'SF Mono', monospace" fill="#555">100×0,35 + 80,2×0,20 + 100×0,20 + 1,0×0,15 + 1,2×0,10 = </text>
+    <text x="560" y="355" font-size="14" font-weight="800" fill="#ef4444">71,3</text>
+
+    <!-- Nuoli alas -->
+    <polygon points="400,374 390,386 410,386" fill="#2563eb"/>
+    <line x1="400" y1="366" x2="400" y2="386" stroke="#2563eb" stroke-width="2"/>
+
+    <!-- Vaihe 4: Lattia-arvo + tulos -->
+    <rect x="20" y="394" width="760" height="110" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="40" y="422" font-size="13" font-weight="700" fill="#2563eb" letter-spacing="1.5">TULOS</text>
+    <text x="130" y="422" font-size="15" font-weight="700" fill="#1a1a1a">Truecost-arvo + lattia-arvo</text>
+
+    <!-- Tulospalkin -->
+    <rect x="40" y="440" width="640" height="14" rx="4" fill="#e5e5e0"/>
+    <rect x="40" y="440" width="457" height="14" rx="4" fill="url(#barGrad)"/>
+    <circle cx="497" cy="447" r="10" fill="#ef4444" stroke="white" stroke-width="2"/>
+    <text x="492" y="451" font-size="10" font-weight="700" fill="white">71</text>
+
+    <text x="40" y="475" font-size="11" fill="#555">0 = ei vaikutusta</text>
+    <text x="330" y="475" font-size="11" fill="#555">50</text>
+    <text x="640" y="475" font-size="11" fill="#555">100 = erittäin suuri</text>
+
+    <text x="40" y="496" font-size="12" fill="#555">Lattia-arvo: jos mikään ulottuvuus > 80 → kokonaisarvo vähintään 40</text>
+  </svg>
+</section>
+
+<!-- Miksi yksi luku -->
+<section style="margin-bottom: 48px; padding: 24px; background: #fef3c7; border-left: 4px solid var(--warning);">
+  <h3>Miksi yksi luku?</h3>
+  <p style="margin-bottom: 12px;">
+    ISO 14044 ja EU:n PEF-kehys kieltävät yhden painotetun ympäristöpistemäärän käytön
+    julkisissa vertailuissa, koska painotus "sisältää väistämättä arvovalintoja".
+  </p>
+  <p style="margin-bottom: 12px;">
+    <strong>Truecost haastaa tämän avoimesti.</strong> Kestävyyskeskustelu on rikki juuri siksi,
+    että ihmisillä ei ole yhtä vertailukelpoista lukua. Ilman sitä 99 % kansasta ei ymmärrä
+    mittasuhteita. Läpinäkyvä ja haastettavissa oleva yksi luku on parempi kuin ei lukua ollenkaan.
+  </p>
+  <p>
+    Siksi <strong>näytämme aina molemmat</strong>: yhden Truecost-luvun otsikkona ja
+    viiden ulottuvuuden erittelyn sen alla. Voit aina porautua absoluuttisiin arvoihin,
+    laskukaavoihin ja alkuperäislähteisiin.
+  </p>
+</section>
+
+<!-- Ulottuvuudet -->
+<section style="margin-bottom: 48px;">
+  <h2>Viisi ulottuvuutta</h2>
+  <p style="color: var(--text-secondary); margin-bottom: 32px;">
+    Normalisoinnin referenssipisteet perustuvat Fanning et al. (2024, Nature) per capita
+    -planeettarajoihin ja Eurostat-dataan.
+  </p>
+
+  
+  <div class="card" style="margin-bottom: 16px;">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Hiilipäästöt</div>
+        <div class="card-category">Paino: 35 %</div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-family: var(--font-mono); font-size: 14px; color: var(--text-secondary);">
+          Pistearvo 100 = 9.5 kg CO₂e
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 12px;">
+      <table style="width: 100%; font-family: var(--font-heading); font-size: 14px; border-collapse: collapse;">
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 6px 0; color: var(--text-secondary);">Vuosibudjetti per capita</td>
+          <td style="padding: 6px 0; text-align: right; font-weight: 600;">950 kg CO₂e </td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 0; color: var(--text-secondary);">Lähde</td>
+          <td style="padding: 6px 0; text-align: right; font-size: 13px;">Fanning et al. (2024), Nature — per-capita planetary boundary: 0.95 tCO₂/yr</td>
+        </tr>
+      </table>
+    </div>
+    
+    <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">Based on the carbon budget consistent with limiting warming to 1.5°C, allocated equally across world population. The richest 10% currently exceed this by 1,700%.</p>
+    
+  </div>
+  
+  <div class="card" style="margin-bottom: 16px;">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Vedenkulutus</div>
+        <div class="card-category">Paino: 20 %</div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-family: var(--font-mono); font-size: 14px; color: var(--text-secondary);">
+          Pistearvo 100 = 3840 liters
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 12px;">
+      <table style="width: 100%; font-family: var(--font-heading); font-size: 14px; border-collapse: collapse;">
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 6px 0; color: var(--text-secondary);">Vuosibudjetti per capita</td>
+          <td style="padding: 6px 0; text-align: right; font-weight: 600;">384,000 liters </td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 0; color: var(--text-secondary);">Lähde</td>
+          <td style="padding: 6px 0; text-align: right; font-size: 13px;">Fanning et al. (2024), Nature — per-capita planetary boundary: 384 m³/yr</td>
+        </tr>
+      </table>
+    </div>
+    
+    <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">Freshwater consumption including virtual water in supply chains. Includes green (rain), blue (surface/ground), and grey (dilution) water.</p>
+    
+  </div>
+  
+  <div class="card" style="margin-bottom: 16px;">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Maankäyttö ja luontokato</div>
+        <div class="card-category">Paino: 20 %</div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-family: var(--font-mono); font-size: 14px; color: var(--text-secondary);">
+          Pistearvo 100 = 51 m²·year
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 12px;">
+      <table style="width: 100%; font-family: var(--font-heading); font-size: 14px; border-collapse: collapse;">
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 6px 0; color: var(--text-secondary);">Vuosibudjetti per capita</td>
+          <td style="padding: 6px 0; text-align: right; font-weight: 600;">5,100 m² MSA-loss equivalent </td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 0; color: var(--text-secondary);">Lähde</td>
+          <td style="padding: 6px 0; text-align: right; font-size: 13px;">Fanning et al. (2024), Nature — per-capita boundary: 0.51 MSA-loss ha/yr</td>
+        </tr>
+      </table>
+    </div>
+    
+    <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">Land use as proxy for biodiversity impact. MSA (Mean Species Abundance) loss measures how much land use reduces local species populations. Intensive cropland ≈ 0.7 MSA loss per hectare.</p>
+    
+  </div>
+  
+  <div class="card" style="margin-bottom: 16px;">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Jäte ja materiaalijalanjälki</div>
+        <div class="card-category">Paino: 15 %</div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-family: var(--font-mono); font-size: 14px; color: var(--text-secondary);">
+          Pistearvo 100 = 5 kg
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 12px;">
+      <table style="width: 100%; font-family: var(--font-heading); font-size: 14px; border-collapse: collapse;">
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 6px 0; color: var(--text-secondary);">Vuosibudjetti per capita</td>
+          <td style="padding: 6px 0; text-align: right; font-weight: 600;">500 kg waste </td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 0; color: var(--text-secondary);">Lähde</td>
+          <td style="padding: 6px 0; text-align: right; font-size: 13px;">Eurostat (2022) — EU average municipal waste: 500 kg/person/year</td>
+        </tr>
+      </table>
+    </div>
+    
+    <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">No planetary boundary exists for waste. Reference based on EU average municipal waste generation. This is a known limitation — waste is a proxy for material throughput and circularity.</p>
+    
+  </div>
+  
+  <div class="card" style="margin-bottom: 16px;">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Myrkyllisyys ja terveys</div>
+        <div class="card-category">Paino: 10 %</div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-family: var(--font-mono); font-size: 14px; color: var(--text-secondary);">
+          Pistearvo 100 = 162 µDALY
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 12px;">
+      <table style="width: 100%; font-family: var(--font-heading); font-size: 14px; border-collapse: collapse;">
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 6px 0; color: var(--text-secondary);">Vuosibudjetti per capita</td>
+          <td style="padding: 6px 0; text-align: right; font-weight: 600;">16,200 µDALY </td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 0; color: var(--text-secondary);">Lähde</td>
+          <td style="padding: 6px 0; text-align: right; font-size: 13px;">ReCiPe 2016 — world per-capita normalization: 0.0162 DALY/person/year</td>
+        </tr>
+      </table>
+    </div>
+    
+    <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">Disability-adjusted life years from environmental exposure. Hardest dimension to quantify at product level. Many items use qualitative estimates with explicit uncertainty notes.</p>
+    
+  </div>
+  
+</section>
+
+<!-- Luotettavuus -->
+<section style="margin-bottom: 48px;">
+  <h2>Datan luotettavuus</h2>
+  <p style="margin-bottom: 16px;">
+    Jokainen absoluuttinen arvo saa luotettavuusarvion ja lähdeviitteen.
+    Luotettavuus näytetään avoimesti kohdesivulla.
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+    <div style="padding: 16px; background: #d1fae5; border-radius: 6px;">
+      <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Korkea</div>
+      <div style="font-size: 13px;">Vertaisarvioitu tutkimus, useita lähteitä, vakiintunut luku</div>
+    </div>
+    <div style="padding: 16px; background: #fef3c7; border-radius: 6px;">
+      <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Keskitaso</div>
+      <div style="font-size: 13px;">Luotettava lähde, mutta merkittävä vaihteluväli</div>
+    </div>
+    <div style="padding: 16px; background: #fee2e2; border-radius: 6px;">
+      <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Matala</div>
+      <div style="font-size: 13px;">Arvio, rajallinen data, eksplisiittinen epävarmuus</div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>Truecost — Avoin kestävyysindeksi</div>
+      <div>Data & metodologia ovat avointa lähdekoodia</div>
+    </div>
+  </footer>
+</body>
+</html>
